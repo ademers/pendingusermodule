@@ -1,4 +1,4 @@
-# Pending User Module module for Craft CMS 3.x
+# Pending User Module for Craft CMS 3.x
 
 A Craft Module that sets all new user accounts to pending status.
 
