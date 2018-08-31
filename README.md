@@ -50,4 +50,4 @@ Some things to do, and ideas for potential features:
 * Update README
 * Release it
 
-Brought to you by [Andrea DeMers](andreademers.com)
+Brought to you by [Andrea DeMers](http://andreademers.com)
