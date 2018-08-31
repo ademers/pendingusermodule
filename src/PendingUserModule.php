@@ -12,16 +12,13 @@ namespace modules\pendingusermodule;
 
 use craft\elements\User;
 use craft\events\ModelEvent;
-use modules\pendingusermodule\assetbundles\pendingusermodule\PendingUserModuleAsset;
 
 use Craft;
 use craft\events\RegisterTemplateRootsEvent;
-use craft\events\TemplateEvent;
 use craft\i18n\PhpMessageSource;
 use craft\web\View;
 
 use yii\base\Event;
-use yii\base\InvalidConfigException;
 use yii\base\Module;
 
 /**
@@ -105,24 +102,6 @@ class PendingUserModule extends Module
     {
         parent::init();
         self::$instance = $this;
-
-        // Load our AssetBundle
-        if (Craft::$app->getRequest()->getIsCpRequest()) {
-            Event::on(
-                View::class,
-                View::EVENT_BEFORE_RENDER_TEMPLATE,
-                function (TemplateEvent $event) {
-                    try {
-                        Craft::$app->getView()->registerAssetBundle(PendingUserModuleAsset::class);
-                    } catch (InvalidConfigException $e) {
-                        Craft::error(
-                            'Error registering AssetBundle - '.$e->getMessage(),
-                            __METHOD__
-                        );
-                    }
-                }
-            );
-        }
 
         // Set new users to pending status
         Event::on(
