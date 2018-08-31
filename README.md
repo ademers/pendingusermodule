@@ -37,7 +37,7 @@ After you have added this, you will need to do:
 
 ## Pending User Module Overview
 
--Insert text here-
+A Craft 3 Module that sets the status of all newly created users to pending.
 
 ## Using Pending User Module
 
@@ -47,6 +47,7 @@ After you have added this, you will need to do:
 
 Some things to do, and ideas for potential features:
 
+* Update README
 * Release it
 
 Brought to you by [Andrea DeMers](andreademers.com)
