@@ -2,6 +2,10 @@
 
 A Craft Module that sets all new user accounts to pending status.
 
+## NOTE
+
+This no longer works as expected in Craft 3.0.27 and above due to changes described at: https://github.com/craftcms/cms/blob/develop/CHANGELOG-v3.md#3027---2018-10-11
+
 ## Requirements
 
 This module requires Craft CMS 3.0.0-RC1 or later.
