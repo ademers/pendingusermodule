@@ -10,8 +10,8 @@
 
 namespace modules\pendingusermodule;
 
-use craft\elements\User;
-use craft\events\ModelEvent;
+use craft\services\Users;
+use craft\events\UserEvent;
 
 use Craft;
 use craft\events\RegisterTemplateRootsEvent;
@@ -103,15 +103,13 @@ class PendingUserModule extends Module
         parent::init();
         self::$instance = $this;
 
-        // Set new users to pending status
+        // Set new users created via front-end registration form to pending status
         Event::on(
-            User::class,
-            User::EVENT_BEFORE_SAVE,
-            function (ModelEvent $event) {
-                /** @var User $user */
-                $user = $event->sender;
-                if ($event->isNew === true) {
-                    $user->pending = true;
+            Users::class,
+            Users::EVENT_BEFORE_ACTIVATE_USER,
+            function (UserEvent $event) {
+                if (Craft::$app->request->getIsSiteRequest()) {
+                    $event->isValid = false;
                 }
             }
         );
