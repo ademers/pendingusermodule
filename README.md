@@ -1,10 +1,6 @@
 # Pending User Module for Craft CMS 3.x
 
-A Craft Module that sets all new user accounts to pending status.
-
-## NOTE
-
-This no longer works as expected in Craft 3.0.27 and above due to changes described at: https://github.com/craftcms/cms/blob/develop/CHANGELOG-v3.md#3027---2018-10-11
+A Craft Module that sets all new user accounts created via a front-end registration form to pending status.
 
 ## Requirements
 
@@ -41,7 +37,7 @@ After you have added this, you will need to do:
 
 ## Pending User Module Overview
 
-A Craft 3 Module that sets the status of all newly created users to pending.
+When a user account is created via a Craft 3 front-end registration form, this module sets the status of the user account to pending. An admin must then manually activate the new user account.
 
 ## Using Pending User Module
 
