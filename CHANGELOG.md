@@ -7,7 +7,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ## 2.0.0 - 2018-10-27
 ### Changed
 - Completely rewritten to maintain compatibility with Craft 3.0.27+.
-- Update README.md.
+- Update README
 
 ## 1.0.0 - 2018-08-31
 ### Added
